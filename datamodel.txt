@@ -1,0 +1,123 @@
+* index page: list of compositions
+* composition page: list tracks
+
+* file structure:
+- users/
+  - <userid>
+    - userinfo/
+    - collections/
+      - <collectionid>/
+    - compositions/
+      - <compositionid>/
+        - tracks/
+          - <track filename>
+            - track_annotations/
+              - <track_annotation key>              
+        - contributors
+          - <contributor userid>
+         - comp_annotations/
+              - <comp_annotation key>  
+
+- verificationcode
+- invitationemail
+
+User:
+ - id  
+ - uid
+ - is_admin
+ - terms_accepted
+ - created_at
+
+UserInfo:
+ - id
+ - user_id (duplicated) 
+ - name
+ - profile_pic
+ - user_uid 
+ - user_email
+ - created_at
+
+Collection:
+- id
+- uuid
+- privacy
+- title
+- description
+- user_id
+- parent_id
+- compositions
+- created_at
+
+Composition:
+ - id
+ - uuid
+ - user_id
+ - title
+ - description
+ - collection_id
+ - privacy (1=Public, 2=Only Reg, 3=Private)
+ - opentocontrib
+ - contributors
+ - tracks
+ - created_at
+ - comp_annotations
+ - is_template
+ - cloned_from
+
+ CompAnnotation:
+ - id
+ - uuid
+ - key
+ - value
+ - composition_uid
+ - created_at
+ - custom_added
+
+
+Track:
+ - id
+ - uuid
+ - composition_id
+ - title
+ - user_id
+ - user_uid
+ - path
+ - compress_path
+ - needs_compress
+ - is_audio_processed
+ - created_at
+ - track_annotations
+ - cloned_from
+ - file_metadata
+
+ TrackAnnotation:
+ - id
+ - uuid
+ - key
+ - value
+ - track_uid
+ - created_at
+ - custom_added
+
+Contributor:
+ - id
+ - user_id
+ - user_uid
+ - composition_id
+ - role (0=None, 1=Owner, 2=Admin, 3=Member, 4=Guest)
+ - created_at
+
+VerificationCode:
+ - id
+ - email
+ - code 
+ - date 
+ - attempts
+
+InvitationEmail:
+ - id
+ - email 
+ - date 
+ - attempts
+ - invited_by
+ - refusal_code 
