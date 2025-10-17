@@ -15,7 +15,7 @@ This repo is a template of the Hi-Audio back-end, which allows to run a simplfie
 
 ### Clone or download the repository
 ```bash
-git clone https://github.com/fan-droide/hiaudio_template.git
+git clone --recursive https://github.com/fan-droide/hiaudio_template.git
 
 cd hiaudio_template
 ```
@@ -38,7 +38,7 @@ venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-### Edit the .env file with the Google OAuth client information
+### Create an .env file with the Google OAuth client information
 ```bash
 # Google Values: https://console.cloud.google.com/apis/credentials
 # SECRET_KEY is independent and can be self-elected
@@ -61,16 +61,16 @@ python app.py
 Open -> https://localhost:7007/
 ```
 
-## To make the frontend repo work together with the backend in local DEV mode/environment
-
-
-Inside backend repo clone the frontend repo:
-```
-git clone https://github.com/idsinge/hiaudio_webapp.git
+## To make the frontend repo (submodule) work together with the backend in local DEV mode/environment, in a different termimal:
 
 ```
+cd hiaudio_demoapp
 
-Then rename the folder `hiaudio_webapp` to `webapp`
+npm i
+
+npm run dev
+
+```
 
 **Hint**: during development it might be useful to temporarly ignore the contents of the public directory, this can be done with
 
