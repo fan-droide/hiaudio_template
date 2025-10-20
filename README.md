@@ -19,14 +19,14 @@ git clone --recursive https://github.com/fan-droide/hiaudio_template.git
 
 cd hiaudio_template
 ```
-### Create and activate Python environment (Linux and macOS)
+### (Linux and macOS) Create and activate Python environment 
 ```bash
 python3 -m venv venv
 
 . venv/bin/activate
 ```
 
-### Create and activate Python environment (Windows)
+### (Windows) Create and activate Python environment 
 ```bash
 python -m venv venv
 
