@@ -9,7 +9,15 @@ Hi-Audio online platform is a collaborative web application for musicians and re
 
 ![screenshot](doc/screenshot.png)
 
-This repo is a template of the Hi-Audio back-end, which allows to run a simplfied version of the server. For the client side (web application) see **NOTE 1**.
+This repo is a template of the Hi-Audio back-end, which allows to run a simplfied version of the server. The corresponding client side submodule (hiaudio_demoapp) can be found here:
+
+https://github.com/fan-droide/hiaudio_demoapp
+
+For the original client and server sides repositories check the following:
+
+[1] https://github.com/idsinge/hiaudio_webapp
+
+[2] https://github.com/idsinge/hiaudio_backend
 
 ## Run the local server. Recommended Python version 3.10
 
@@ -64,7 +72,7 @@ Open -> https://localhost:7007/
 ### At this point you should see the following page:
 ![screenshot](doc/demoapp_template.png)
 
-## To make the frontend repo (submodule, see Note 1) work together with the backend in local DEV mode/environment, in a different termimal:
+## To make the frontend repo work together with the backend in local DEV mode/environment (hiaudio_demoapp submodule, see Note 1 for more info), in a different termimal inside the current directory run the following commands:
 
 ```
 cd hiaudio_demoapp
