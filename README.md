@@ -74,7 +74,7 @@ Open -> https://localhost:7007/
 
 ## To make the frontend repo work together with the backend in local DEV mode/environment (hiaudio_demoapp submodule, see Note 1 for more info), in a different termimal inside the current directory run the following commands:
 
-```
+```bash
 cd hiaudio_demoapp
 
 npm i
@@ -82,6 +82,13 @@ npm i
 npm run dev
 
 ```
+
+## Keep up to date `hiaudio_demoapp` submodule:
+
+```bash
+git pull --recurse-submodules
+```
+
 
 **Hint**: during development it might be useful to temporarly ignore the contents of the public directory, this can be done with
 
