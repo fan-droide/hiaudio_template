@@ -61,6 +61,9 @@ python app.py
 Open -> https://localhost:7007/
 ```
 
+### At this point you should see the following page:
+![screenshot](doc/demoapp_template.png)
+
 ## To make the frontend repo (submodule) work together with the backend in local DEV mode/environment, in a different termimal:
 
 ```
