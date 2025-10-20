@@ -64,7 +64,7 @@ Open -> https://localhost:7007/
 ### At this point you should see the following page:
 ![screenshot](doc/demoapp_template.png)
 
-## To make the frontend repo (submodule) work together with the backend in local DEV mode/environment, in a different termimal:
+## To make the frontend repo (submodule, see Note 1) work together with the backend in local DEV mode/environment, in a different termimal:
 
 ```
 cd hiaudio_demoapp
@@ -87,4 +87,4 @@ git ls-files -z public/ | xargs -0 git update-index --no-skip-worktree
 
 
 ## NOTES:
-1- [Web App Repo](https://github.com/idsinge/hiaudio_webapp)
+1- [Submodule - Demo Web App Repo](https://github.com/fan-droide/hiaudio_demoapp)
