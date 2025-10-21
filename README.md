@@ -23,7 +23,7 @@ For the original client and server sides repositories check the following:
 
 ### Clone or download the repository
 ```bash
-git clone --recursive https://github.com/fan-droide/hiaudio_template.git
+git clone --recurse-submodules --remote-submodules https://github.com/fan-droide/hiaudio_template.git
 
 cd hiaudio_template
 ```
