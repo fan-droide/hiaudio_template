@@ -83,10 +83,10 @@ npm run dev
 
 ```
 
-## Keep up to date `hiaudio_demoapp` submodule:
+## Keep up to date `hiaudio_demoapp` and `waveform-playlist` submodules:
 
 ```bash
-git pull --recurse-submodules
+git submodule update --recursive --remote --merge
 ```
 
 
