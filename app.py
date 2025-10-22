@@ -22,7 +22,10 @@ import api.annotation
 import config
 
 DB_FILE = config.DB_FILE if hasattr(config, 'DB_FILE') else None
-app = Flask(__name__, static_folder=os.path.join(config.BASEDIR, "public", "static"))
+FRONTEND_DIR = "public"
+if getattr(config, 'DEV_FRONTEND', False):
+    FRONTEND_DIR = "hiaudio_demoapp/public"
+app = Flask(__name__, static_folder=os.path.join(config.BASEDIR, FRONTEND_DIR, "static"))
 
 app.register_blueprint(api.auth.auth)
 app.register_blueprint(api.user.user)
@@ -85,8 +88,8 @@ def redirect_external():
 @app.route('/<path:filename>', methods=['GET', 'POST'])
 def page(filename):
     filename = filename or DEFAULT_PAGE
-    if request.method == 'GET':   
-        return send_from_directory(os.path.join(config.BASEDIR, "public"), filename)
+    if request.method == 'GET':
+        return send_from_directory(os.path.join(config.BASEDIR, FRONTEND_DIR), filename)
 
     abort(404, description="Resource not found")
 

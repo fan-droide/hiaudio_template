@@ -8,6 +8,7 @@ ALLOWED_EXTENSIONS = {'wav', 'mp3', 'ogg', 'm4a', 'flac'}
 UPLOAD_MAX_SIZE = 100*1024*1024 # 100MiB
 COMPRESSION_MODULE_ACTIVE = False
 EMAIL_MODULE_ACTIVE = False
+DEV_FRONTEND = False
 
 # sqllite config example
 
